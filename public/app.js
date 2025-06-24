@@ -4,6 +4,29 @@ const statusEl = document.getElementById('status');
 const table = document.getElementById('resultTable');
 const tbody = table.querySelector('tbody');
 
+// Pre-selected queries to help users
+const suggestions = [
+  'show me marriott properties in delhi with less than 30k points per night',
+  'cheapest marriott redemption in hyderabad',
+  'cost of westin Himalayas in points',
+  'show me JW Marriott properties in Goa',
+  'show me hotels in Chennai under 15000 points per night'
+];
+
+const suggestionsContainer = document.getElementById('suggestions');
+
+suggestions.forEach(text => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn btn-sm btn-outline-secondary';
+  btn.textContent = text;
+  btn.addEventListener('click', () => {
+    queryInput.value = text;
+    form.requestSubmit();
+  });
+  suggestionsContainer.appendChild(btn);
+});
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const query = queryInput.value.trim();
