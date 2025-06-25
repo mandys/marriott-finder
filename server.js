@@ -44,7 +44,9 @@ const records = rawRecords.map(r => {
     AvgPtValue: r['AvgPtValue'] || r['Ave Pt Value'],
     AvgPtsNight: r['AvgPtsNight'] || r['Ave Pts / night'] || r['Ave Pts / Night'],
     AvgPts5Nights: r['AvgPts5Nights'] || r['Ave Pts / 5 Nights'] || r['Ave Pts / 5 nights'],
-    State: r.State || r.state || ''
+    State: r.State || r.state || '',
+    DistanceKmFromAirport: Number(r.DistanceKmFromAirport || 0),
+    // numeric fields handled below
   };
 
   // Coerce numeric strings → numbers (remove ₹ and commas)
@@ -74,7 +76,8 @@ const filterSchema = {
     state: { type: 'string' },
     hotel: { type: 'string' },
     minPtsNight: { type: 'number' },
-    maxPtsNight: { type: 'number' }
+    maxPtsNight: { type: 'number' },
+    maxDistanceKm: { type: 'number' }
   },
   additionalProperties: false
 };
@@ -83,7 +86,7 @@ const validateFilter = ajv.compile(filterSchema);
 
 async function queryToFilter(query) {
   if (!openai.apiKey) throw new Error('OPENAI_API_KEY missing');
-  const systemPrompt = `Convert the user's sentence into a JSON object used to filter a hotel list. Allowed keys:\n  • city  (string – case insensitive exact match)\n  • brand (string – case insensitive exact or partial match)\n  • state (string – case insensitive exact or partial match)\n  • hotel (string – case insensitive substring to match within the hotel name)\n  • maxPtsNight (number – assume numbers refer to points, not nights)\n  • minPtsNight (number – assume numbers refer to points, not nights)\nIf the user talks about \"nights\" (e.g. \"for 5 nights\") do NOT set any numeric point filter.\nReturn ONLY valid JSON with these keys (omit keys that don't apply). Do NOT wrap in code fences.`;
+  const systemPrompt = `Convert the user's sentence into a JSON object used to filter a hotel list. Allowed keys:\n  • city  (string – case insensitive exact match)\n  • brand (string – case insensitive exact or partial match)\n  • state (string – case insensitive exact or partial match)\n  • hotel (string – case insensitive substring to match within the hotel name)\n  • maxPtsNight (number – assume numbers refer to points, not nights)\n  • minPtsNight (number – assume numbers refer to points, not nights)\n  • maxDistanceKm (number – maximum distance from airport in kilometres)\nIf the user talks about \"nights\" (e.g. \"for 5 nights\") do NOT set any numeric point filter.\nReturn ONLY valid JSON with these keys (omit keys that don't apply). Do NOT wrap in code fences.`;
 
   const { choices } = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
@@ -142,6 +145,7 @@ function applyFilter(filter) {
 
   if (filter.maxPtsNight !== undefined) res = res.filter(r => r.AvgPtsNight <= filter.maxPtsNight);
   if (filter.minPtsNight !== undefined) res = res.filter(r => r.AvgPtsNight >= filter.minPtsNight);
+  if (filter.maxDistanceKm !== undefined) res = res.filter(r => r.DistanceKmFromAirport && r.DistanceKmFromAirport <= filter.maxDistanceKm);
   return res;
 }
 

@@ -13,7 +13,10 @@ const suggestions = [
   'show me hotels in Chennai under 15000 points per night',
   'cheapest marriott redemption in karnataka',
   'show me marriott hotels in telangana under 30000 points',
-  'westin properties in rajasthan'
+  'westin properties in rajasthan',
+  'marriott hotels within 10 km of airport in hyderabad',
+  'cheapest redemption in delhi within 5 km of airport',
+  'jw marriott under 15km from airport in goa'
 ];
 
 const suggestionsContainer = document.getElementById('suggestions');
@@ -58,6 +61,8 @@ form.addEventListener('submit', async (e) => {
         <td>${row.Brand}</td>
         <td>${row.Hotel}</td>
         <td>${row.City}</td>
+        <td>${row.State}</td>
+        <td>${row.DistanceKmFromAirport ? row.DistanceKmFromAirport.toFixed(1) : ''}</td>
         <td>${row.AvgPtsNight.toLocaleString()}</td>
         <td>${row.AvgPts5Nights.toLocaleString()}</td>
       `;

@@ -1,0 +1,402 @@
+{
+  "undefined, Tehri Garhwal, India": {
+    "lat": 30.37391,
+    "lon": 78.432609
+  },
+  "Tehri Garhwal International Airport, India": {
+    "lat": 30.37391,
+    "lon": 78.432609
+  },
+  "undefined, Navi Mumbai, India": {
+    "lat": 19.030146,
+    "lon": 73.02022
+  },
+  "Navi Mumbai International Airport, India": {
+    "lat": 19.030146,
+    "lon": 73.02022
+  },
+  "Hyderabad International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Hyderabad, India": {
+    "lat": 17.361362,
+    "lon": 78.474525
+  },
+  "undefined, Faridabad, India": {
+    "lat": 28.410484,
+    "lon": 77.31821
+  },
+  "Faridabad International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Chennai International Airport, India": {
+    "lat": 12.986417,
+    "lon": 80.17439
+  },
+  "undefined, Chennai, India": {
+    "lat": 13.050513,
+    "lon": 80.2427
+  },
+  "undefined, Bengaluru, India": {
+    "lat": 12.979101,
+    "lon": 77.591301
+  },
+  "Bengaluru International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "New Delhi International Airport, India": {
+    "lat": 28.613928,
+    "lon": 77.20877
+  },
+  "undefined, New Delhi, India": {
+    "lat": 28.613928,
+    "lon": 77.20877
+  },
+  "Kochi International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Kochi, India": {
+    "lat": 9.966457,
+    "lon": 76.2428
+  },
+  "undefined, Siliguri, India": {
+    "lat": 26.702359,
+    "lon": 88.444667
+  },
+  "Siliguri International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Pushkar International Airport, India": {
+    "lat": 23.075384,
+    "lon": 72.620521
+  },
+  "undefined, Pushkar, India": {
+    "lat": 26.500324,
+    "lon": 74.63055
+  },
+  "undefined, Mumbai, India": {
+    "lat": 19.077793,
+    "lon": 72.87872
+  },
+  "Mumbai International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Pune International Airport, India": {
+    "lat": 18.578579,
+    "lon": 73.90865
+  },
+  "undefined, Pune, India": {
+    "lat": 18.515669,
+    "lon": 73.856285
+  },
+  "Gurugram Haryana International Airport, India": {
+    "lat": 28.464655,
+    "lon": 77.02957
+  },
+  "undefined, Gurugram Haryana, India": {
+    "lat": 28.464655,
+    "lon": 77.02957
+  },
+  "undefined, Ramnagar, India": {
+    "lat": 29.394726,
+    "lon": 79.12658
+  },
+  "Ramnagar International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Ganderbal International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Ganderbal, India": {
+    "lat": 34.21644,
+    "lon": 74.772156
+  },
+  "undefined, Visakhapatnam, India": {
+    "lat": 17.72484,
+    "lon": 83.30616
+  },
+  "Visakhapatnam International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Vadodara, India": {
+    "lat": 22.299917,
+    "lon": 73.201195
+  },
+  "Vadodara International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Sohna-Gurgaon, India": {
+    "lat": 28.245747,
+    "lon": 77.07102
+  },
+  "Sohna-Gurgaon International Airport, India": {
+    "lat": 28.245747,
+    "lon": 77.07102
+  },
+  "undefined, Raipur, India": {
+    "lat": 21.243176,
+    "lon": 81.63432
+  },
+  "Raipur International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Madurai, India": {
+    "lat": 9.918035,
+    "lon": 78.11834
+  },
+  "Madurai International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Lucknow International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Lucknow, India": {
+    "lat": 26.84312,
+    "lon": 80.92392
+  },
+  "Kolkata International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Kolkata, India": {
+    "lat": 22.556843,
+    "lon": 88.35465
+  },
+  "undefined, Madikeri, India": {
+    "lat": 12.422925,
+    "lon": 75.73896
+  },
+  "Madikeri International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Jaisalmer International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Jaisalmer, India": {
+    "lat": 26.913721,
+    "lon": 70.911514
+  },
+  "undefined, Chandigarh, India": {
+    "lat": 30.73958,
+    "lon": 76.78427
+  },
+  "Chandigarh International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Jaipur, India": {
+    "lat": 26.920341,
+    "lon": 75.81248
+  },
+  "Jaipur International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Ahmedabad, India": {
+    "lat": 23.024553,
+    "lon": 72.58957
+  },
+  "Ahmedabad International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Agra, India": {
+    "lat": 27.17493,
+    "lon": 78.00882
+  },
+  "Agra International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Surat International Airport, India": {
+    "lat": 21.138027,
+    "lon": 72.75096
+  },
+  "undefined, Surat, India": {
+    "lat": 21.20934,
+    "lon": 72.83305
+  },
+  "Nashik International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Nashik, India": {
+    "lat": 20.006659,
+    "lon": 73.789474
+  },
+  "Nagpur International Airport, India": {
+    "lat": 21.138027,
+    "lon": 72.75096
+  },
+  "undefined, Nagpur, India": {
+    "lat": 21.1498,
+    "lon": 79.0821
+  },
+  "undefined, Mahabaleshwar, India": {
+    "lat": 17.9247,
+    "lon": 73.657745
+  },
+  "Mahabaleshwar International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Indore International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Indore, India": {
+    "lat": 22.718885,
+    "lon": 75.85921
+  },
+  "Gurgaon International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Gurgaon, India": {
+    "lat": 28.464655,
+    "lon": 77.02957
+  },
+  "undefined, Goa, India": {
+    "lat": 15.325556,
+    "lon": 74.054111
+  },
+  "Goa International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Dehradun, India": {
+    "lat": 30.320742,
+    "lon": 78.04099
+  },
+  "Dehradun International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Coimbatore International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Coimbatore, India": {
+    "lat": 11.006775,
+    "lon": 76.957886
+  },
+  "undefined, Bhopal, India": {
+    "lat": 28.583797,
+    "lon": 77.25041
+  },
+  "Bhopal International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Amritsar, India": {
+    "lat": 31.63423,
+    "lon": 74.87388
+  },
+  "Amritsar International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Shillong, India": {
+    "lat": 25.575846,
+    "lon": 91.88283
+  },
+  "Shillong International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Neelambur, India": {
+    "lat": 9.073565,
+    "lon": 76.573881
+  },
+  "Neelambur International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Calangute, India": {
+    "lat": 15.545683,
+    "lon": 73.76461
+  },
+  "Calangute International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Katra International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Katra, India": {
+    "lat": 32.991753,
+    "lon": 74.93148
+  },
+  "Tiruchirappalli International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Tiruchirappalli, India": {
+    "lat": 10.804456,
+    "lon": 78.68704
+  },
+  "undefined, Sriperumbudur, India": {
+    "lat": 12.966904,
+    "lon": 79.94545
+  },
+  "Sriperumbudur International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Srinagar, India": {
+    "lat": 34.07475,
+    "lon": 74.82129
+  },
+  "Srinagar International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "Belgaum International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Belgaum, India": {
+    "lat": 15.8609,
+    "lon": 74.51295
+  },
+  "undefined, Mussoorie, India": {
+    "lat": 30.45566,
+    "lon": 78.080284
+  },
+  "Mussoorie International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Jodhpur, India": {
+    "lat": 26.29694,
+    "lon": 73.03567
+  },
+  "Jodhpur International Airport, India": {
+    "lat": 26.836164,
+    "lon": 75.79507
+  },
+  "undefined, Bilaspur Chhattisgarh, India": {
+    "lat": 22.077074,
+    "lon": 82.15218
+  },
+  "Bilaspur Chhattisgarh International Airport, India": {
+    "lat": 22.077074,
+    "lon": 82.15218
+  }
+}
