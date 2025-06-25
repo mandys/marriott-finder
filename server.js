@@ -60,6 +60,21 @@ const records = rawRecords.map(r => {
 // Build a quick lookup of state names available in the dataset
 const knownStates = new Set(records.map(r => r.State.toLowerCase()).filter(Boolean));
 
+// Map common city aliases to canonical names used in CSV
+const cityAliases = {
+  bangalore: 'bengaluru',
+  bengaluru: 'bengaluru',
+  bombay: 'mumbai',
+  delhi: 'new delhi',
+  gurugram: 'gurgaon',
+  gurgaon: 'gurgaon'
+};
+
+function canonicalCity(name) {
+  const key = name.toLowerCase();
+  return cityAliases[key] || name;
+}
+
 // -----------------------------
 // LLM setup
 // -----------------------------
@@ -98,6 +113,9 @@ async function queryToFilter(query) {
   });
   const content = choices[0].message.content.trim();
   const filter = JSON.parse(content);
+  // Canonicalise city name if present
+  if (filter.city) filter.city = canonicalCity(filter.city);
+
   // If the LLM put a state name into `city`, correct it.
   if (filter.city && !filter.state) {
     const maybeState = filter.city.toLowerCase();
@@ -106,6 +124,17 @@ async function queryToFilter(query) {
       delete filter.city;
     }
   }
+
+  // If city is still missing but query mentions an alias, infer it
+  if (!filter.city) {
+    for (const alias in cityAliases) {
+      if (query.toLowerCase().includes(alias)) {
+        filter.city = cityAliases[alias];
+        break;
+      }
+    }
+  }
+
   // If the LLM produced unrealistically small point values (likely mis-parsing
   // a phrase such as "for 5 nights") drop those numeric filters.
   if (filter.maxPtsNight !== undefined && filter.maxPtsNight < 1000) delete filter.maxPtsNight;
