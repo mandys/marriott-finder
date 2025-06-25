@@ -10,7 +10,10 @@ const suggestions = [
   'cheapest marriott redemption in hyderabad',
   'cost of westin Himalayas in points',
   'show me JW Marriott properties in Goa',
-  'show me hotels in Chennai under 15000 points per night'
+  'show me hotels in Chennai under 15000 points per night',
+  'cheapest marriott redemption in karnataka',
+  'show me marriott hotels in telangana under 30000 points',
+  'westin properties in rajasthan'
 ];
 
 const suggestionsContainer = document.getElementById('suggestions');
