@@ -3,6 +3,7 @@ const queryInput = document.getElementById('query');
 const statusEl = document.getElementById('status');
 const table = document.getElementById('resultTable');
 const tbody = table.querySelector('tbody');
+const cardsContainer = document.getElementById('resultCards');
 
 // Pre-selected queries to help users
 const suggestions = [
@@ -15,8 +16,9 @@ const suggestions = [
   'show me marriott hotels in telangana under 30000 points',
   'westin properties in rajasthan',
   'marriott hotels within 10 km of airport in hyderabad',
-  'cheapest redemption in delhi within 5 km of airport',
-  'jw marriott under 15km from airport in goa'
+  'cheapest redemption in delhi within 19 km of airport',
+  'jw marriott under 35km from airport in goa',
+  'hotels nearest to bengaluru airport'
 ];
 
 const suggestionsContainer = document.getElementById('suggestions');
@@ -40,7 +42,7 @@ form.addEventListener('submit', async (e) => {
 
   statusEl.textContent = 'Thinking…';
   tbody.innerHTML = '';
-  table.style.display = 'none';
+  cardsContainer.innerHTML = '';
 
   try {
     const res = await fetch('/search', {
@@ -67,8 +69,21 @@ form.addEventListener('submit', async (e) => {
         <td>${row.AvgPts5Nights.toLocaleString()}</td>
       `;
       tbody.appendChild(tr);
+
+      // Mobile card
+      const card = document.createElement('div');
+      card.className = 'card mb-3 shadow-sm';
+      card.innerHTML = `
+        <div class="card-body p-3">
+          <h6 class="card-title mb-1">${row.Hotel}</h6>
+          <p class="card-subtitle text-muted mb-2 small">${row.Brand} • ${row.City}, ${row.State}</p>
+          <div class="d-flex justify-content-between small">
+            <span><i class="fa-solid fa-plane"></i> ${row.DistanceKmFromAirport ? row.DistanceKmFromAirport.toFixed(1) + ' km' : '—'}</span>
+            <span><strong>${row.AvgPtsNight.toLocaleString()}</strong> pts / night</span>
+          </div>
+        </div>`;
+      cardsContainer.appendChild(card);
     }
-    table.style.display = data.length ? '' : 'none';
   } catch (err) {
     console.error(err);
     statusEl.textContent = err.message;

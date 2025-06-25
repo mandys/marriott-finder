@@ -162,6 +162,10 @@ app.post('/search', async (req, res) => {
 
   try {
     const filter = await queryToFilter(query);
+    // If user asked for nearest/closest, we do our own distance sort later; ignore any overly strict maxDistanceKm added by the LLM.
+    const wantsNearest = /\b(nearest|closest)\b/i.test(query);
+    if (wantsNearest) delete filter.maxDistanceKm;
+
     if (!validateFilter(filter)) {
       return res.status(422).json({ error: 'invalid filter generated', details: validateFilter.errors });
     }
@@ -172,6 +176,15 @@ app.post('/search', async (req, res) => {
       const min = Math.min(...data.map(r => r.AvgPtsNight));
       data = data.filter(r => r.AvgPtsNight === min);
     }
+
+    // Handle nearest/closest intent: sort by distance inside the already filtered set.
+    if (wantsNearest) {
+      data = data
+        .filter(r => r.DistanceKmFromAirport > 0)
+        .sort((a, b) => a.DistanceKmFromAirport - b.DistanceKmFromAirport)
+        .slice(0, 5);
+    }
+
     res.json({ count: data.length, data });
   } catch (err) {
     console.error(err);

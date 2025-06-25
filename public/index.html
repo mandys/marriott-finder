@@ -34,8 +34,8 @@
 
       <div id="status" class="mb-3 text-muted"></div>
 
-      <div class="table-responsive">
-        <table id="resultTable" class="table table-hover align-middle" style="display:none;">
+      <div class="table-responsive d-none d-md-block">
+        <table id="resultTable" class="table table-hover align-middle">
           <thead class="table-light">
             <tr>
               <th>Brand</th>
@@ -51,15 +51,24 @@
         </table>
       </div>
 
+      <!-- Mobile card results -->
+      <div id="resultCards" class="d-md-none"></div>
+
       <div class="col-12">
         <small class="text-muted">Quick examples:</small>
         <div id="suggestions" class="mt-2 d-flex flex-wrap gap-2">
           <!-- suggestion chips will be rendered here -->
         </div>
       </div>
+
+      <div class="mt-4">
+        <p class="small text-muted">Data inspiration credit: <a href="https://x.com/ccg33k/status/1937557010574376969" target="_blank">@ccg33k</a>’s tweet. We extended the spreadsheet with State names, distance & drive-time from the nearest airport, and built this LLM-powered search UI.</p>
+        <blockquote class="twitter-tweet" data-theme="light"><a href="https://x.com/ccg33k/status/1937557010574376969"></a></blockquote>
+      </div>
     </div><!-- /card -->
   </div>
 
+  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="app.js" type="module"></script>
 </body>
 </html> 
